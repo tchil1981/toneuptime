@@ -1,0 +1,149 @@
+
+@font-face
+{
+    font-family:CooperBlackStd;
+    src:url(fonts/CooperBlackStd.otf)
+}
+
+h1 {
+  color: #369;
+  font-size: 150%;
+}
+body {
+  margin: 2em;
+}
+
+.app-container
+{
+    font-family: monospace;
+    width: 90%;
+    border:  solid 1px lightgray;
+    overflow: auto;
+    margin: auto;
+    padding: 1em;
+
+}
+
+.intro-container
+{
+    width: 100%;
+    height: auto;
+    font-size: 1.5em;
+    
+}
+
+.intro-left
+{
+    width: 38%;
+    height: auto;
+    padding: 1em;
+    /*background-color: aliceblue;;*/
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    
+}
+
+.intro-right
+{
+    width: auto;
+    height: auto;
+    padding: 1em;
+    background-color:  aliceblue;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+
+.featured
+{
+    width: 100%;
+}
+.comedian
+{
+    width: 48%;
+    height: auto;
+    background-color: white;
+    display:  inline-block;
+    margin: auto;
+    text-align: center;
+    vertical-align: top;
+    
+}
+
+
+.comedian img
+{
+    width:100%;
+    height: auto;
+}
+comedian-view{ width:auto; height:auto; }
+
+
+.date
+{
+    width: 100%;
+    height: 50px;
+    font-size: .7em;
+    font-family: CooperBlackStd; 
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.date .string
+{
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    display:  inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #C41231;
+   
+}
+
+.date .day
+{
+    width: 21%;
+    height: 50%;
+    background-color:  #F7941E;
+    display: inline-block;
+    padding-top:15px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.date .time
+{
+    color: black;
+    font-size: 15px;
+}
+
+
+/* controls styles*/
+.controls
+{
+    width:100%;
+    height:100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.book, .info
+{
+    width:48.5%;
+    height: 100%;
+    display: inline-block;
+    cursor: pointer;
+    
+}
+
+.book img, .info img
+{
+    width:auto;
+    height:100%;
+}
+

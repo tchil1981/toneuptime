@@ -1,0 +1,17 @@
+<div class="intro-container">
+    <div class="intro-left">
+
+       <!-- <date-view     *ngFor='let comedian of comedians'></date-view> --> 
+
+       <div *ngFor='let f of featured'>
+            
+              <date-view [date]="f.date"></date-view>
+              <comedian-view [comedian]="f.comedians[0]"></comedian-view>
+              <comedian-view [comedian]="f.comedians[1]"></comedian-view>
+              <div><a [routerLink]="['/booking-view', f.id]">For all listed comedians click here..</a></div>
+              <controls-view [featured]='f' ></controls-view>
+       </div>
+
+    </div>
+    <div class="intro-right"></div>
+</div>
