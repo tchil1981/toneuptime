@@ -12,6 +12,8 @@ var core_1 = require('@angular/core');
 var comedian_1 = require('./../models/comedian');
 var ComedianView = (function () {
     function ComedianView() {
+        this.showInfo = false;
+        this.readMore = false;
     }
     ComedianView.prototype.ngOnInit = function () {
     };
@@ -20,10 +22,23 @@ var ComedianView = (function () {
     ComedianView.prototype.echo = function (c) {
         console.log('am echoed now ', c);
     };
+    ComedianView.prototype.showDesc = function (event, show) {
+        this.showInfo = this.showInfo == false ? show : false;
+        //console.log(event.target, show);
+        // event.target.innerHTML  =  this.showInfo ? 'Hide info':'Read More..';
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', comedian_1.Comedian)
     ], ComedianView.prototype, "comedian", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], ComedianView.prototype, "showInfo", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], ComedianView.prototype, "readMore", void 0);
     ComedianView = __decorate([
         core_1.Component({
             selector: 'comedian-view',

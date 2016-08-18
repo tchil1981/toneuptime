@@ -1,5 +1,6 @@
 <div class="comedian">
-    <div><img alt="c" src=""/></div>
-    <div>{{comedian.name}}</div>
+    <div><img alt="c" src="{{comedian.image}}"/></div>
+    <div class="cname">{{comedian.name}}<span class="readMore" *ngIf="readMore" (click)="showDesc($event, true)">Read more..</span></div>
+    <div class="comedianInfo" *ngIf="showInfo">{{comedian.desc}}</div>
 </div>
 

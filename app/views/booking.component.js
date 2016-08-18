@@ -10,18 +10,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var date_component_1 = require('./../views/date.component');
+var venue_component_1 = require('./../views/venue.component');
+var comedian_component_1 = require('./comedian.component');
+var comedians_1 = require('./../models/comedians');
+var router_1 = require('@angular/router');
 var BookingView = (function () {
-    function BookingView() {
+    function BookingView(router, route) {
+        this.router = router;
+        this.route = route;
     }
-    BookingView.prototype.ngOnInit = function () { };
+    BookingView.prototype.ngOnInit = function () {
+        var id = +this.route.snapshot.params['id'];
+        this.featured = comedians_1.comedians[id];
+        var action = +this.route.snapshot.params['action'];
+        switch (action) {
+            case 1:
+                this.info = 'info';
+                break;
+            default:
+                this.book = 'book';
+                break;
+        }
+    };
     BookingView.prototype.ngOnDestroy = function () { };
     BookingView = __decorate([
         core_1.Component({
             selector: 'booking-view',
             templateUrl: 'templates/booking.html',
-            directives: [date_component_1.DateView]
+            directives: [date_component_1.DateView, venue_component_1.VenueView, comedian_component_1.ComedianView]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute])
     ], BookingView);
     return BookingView;
 }());

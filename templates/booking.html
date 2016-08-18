@@ -1,5 +1,21 @@
-<div class="intro-container">
+<div class="content">
 
-    Booking Info.
+   <venue-view [venue]="featured.venue" [book]="book" [info]="info"></venue-view>
+   <date-view  [date] ="featured.date" [booking]='true'></date-view>
 
+   <div class="left-panel">
+       <div class="title">featured list of comedians</div>
+       <div *ngFor='let comedian of featured.comedians' class="fcomedians">
+           <comedian-view [comedian]="comedian" [readMore]="true"></comedian-view> 
+       </div>
+   </div>
+   
+    <div class="right-panel">
+        
+        Comedy Info comes here...
+        
+    </div>
 </div>
+
+
+ 

@@ -29,5 +29,6 @@ import {Date} from './../models/date'
         @Input()
         date:Date;
 
-        public booking:boolean;
+        @Input()
+        booking:boolean;
     }

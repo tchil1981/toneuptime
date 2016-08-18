@@ -9,30 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var date_1 = require('./../models/date');
-var DateView = (function () {
-    function DateView() {
+var VenueView = (function () {
+    function VenueView() {
+        this.venue = '';
     }
-    DateView.prototype.ngOnInit = function () {
-    };
-    DateView.prototype.ngOnDestroy = function () {
-    };
+    VenueView.prototype.ngOnInit = function () { };
+    VenueView.prototype.ngOnDestroy = function () { };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', date_1.Date)
-    ], DateView.prototype, "date", void 0);
+        __metadata('design:type', String)
+    ], VenueView.prototype, "venue", void 0);
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Boolean)
-    ], DateView.prototype, "booking", void 0);
-    DateView = __decorate([
+        __metadata('design:type', String)
+    ], VenueView.prototype, "book", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], VenueView.prototype, "info", void 0);
+    VenueView = __decorate([
         core_1.Component({
-            selector: 'date-view',
-            templateUrl: 'templates/date.html'
+            selector: 'venue-view',
+            templateUrl: 'templates/venue.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], DateView);
-    return DateView;
+    ], VenueView);
+    return VenueView;
 }());
-exports.DateView = DateView;
-//# sourceMappingURL=date.component.js.map
+exports.VenueView = VenueView;
+//# sourceMappingURL=venue.component.js.map
